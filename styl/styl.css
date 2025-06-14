@@ -1,277 +1,176 @@
-*{
-    padding : 0px;
-    margin : 0px;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-  
-  
-    /*text-align: center;
-    */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-/*********************************************** HEADER ********************************************/
+
+body {
+    background-color: rgb(130, 120, 87);
+}
+
 header {
     display: flex;
     align-items: center;
     background-color: rgb(130, 120, 87);
-    /*background-color:rgb(48, 47, 47);*/
     border-radius: 15px;
-    text-align: center;
     justify-content: space-between;
     box-shadow: 0 4px 6px rgba(47, 47, 47, 0.2);
     margin: 20px 10px;
     height: 130px;
-  }
-  .logo img{
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.logo img {
     height: 100px;
-    padding: 15px;
     border-radius: 20px;
-  }
-  header h2{
-    /*osition: center;*/
-    color: black;
-    font-size: 1.7em;
-    margin: 20px;
-  
-  }
-  header nav{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    
-  }
-  nav ul{
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     gap: 20px;
-    
-  }
-  nav li {
-    display: inline-block;
-    margin: 0px 20px;
-    
-  }
-  nav ul li a {
+    flex-wrap: wrap;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 15px;
-  }
-  nav ul li a:hover{
-    background-color: #575757;
-  }
-  /*************************************** ACCUEIL **********************************/
-  body{
-    /*background-color: rgb(26, 24, 24);*/
-    background-color: rgb(130, 120, 87);;
-  }
-#accueil{
-    /* background-color: rgb(255, 255, 255);*/
-     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-     border-radius: 15px;
-     margin: 20px 20px;
-     padding: 20px;
-     text-align: center;
-     /*height: 200px;*/
-     height: auto;
-   }
-   #accueil h2{
-     text-align: center;
-     color: white;
-     /*color: rgb(198, 182, 131);
-     /*margin-top: 20px;
-     margin-bottom: 20px;  
-     padding-bottom: 20px;*/
-     font-size: 1.7em;
-     margin: 20px;
-     padding: 10px;
-   }
-   #accueil img{
-     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-     border-radius: 15px;
-   
-     /*display: block;*/
-     
-     
-   }
-   /******************************NOS SERVICES *************************/
-  /* #service {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}*/
+}
 
-#service {
-    /*background-color: rgb(87, 87, 87);
-    /*background-color: rgb(44, 43, 43);*/
-    background-color: rgb(130, 120, 87);
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+#accueil {
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-   /* background-color: #555;*/
     border-radius: 15px;
     margin: 20px;
-    /*height: auto;*/
     padding: 20px;
-    /*height: 1000px;*/
+    text-align: center;
+}
+
+#accueil h2 {
+    color: white;
+    font-size: 1.7em;
+    margin: 20px;
+    padding: 10px;
+}
+
+#accueil img {
+    max-width: 100%;
     height: auto;
-  
-  }
-#service h3{
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#service {
+    background-color: rgb(130, 120, 87);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#service h3 {
     text-align: center;
     margin: 20px;
     font-size: 1.7em;
     padding: 20px;
 }
-  /**********FLASHCARD*******/
-  .flashcards-container {
+
+.flashcards-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     max-width: 1000px;
     margin: auto;
 }
+
 .flashcard {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  perspective: 1000px;
-}
-/*.flashcard {
-    width: 300px;
-    height: 400px;
-    perspective: 1000px; /* Ajoute de la profondeur pour l'effet 3D */
-   /* position: relative;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
 }
 
-/* Conteneur de la carte avec transformation 3D */
 .card {
     width: 100%;
     height: 100%;
-    /*height: 500px;*/
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s; /* Animation de la rotation */
-}
-.flashcard:hover .card {
-  transform: rotateY(180deg);
+    transition: transform 0.6s;
 }
 
-/* Au survol, on applique la rotation */
-/*.flashcard:hover .card , .flashcard:active .card  {
+.flashcard:hover .card {
     transform: rotateY(180deg);
 }
 
-/* Style des faces avant et arrière de la carte */
 .front, .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-/*.front, .back {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
-    backface-visibility: hidden; /* Masque la face arrière quand retournée */
-   /*display: flex;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-/* Style de la face avant */
 .front {
-  background: white;
+    background: white;
 }
 
 .back {
-  background: white;
-  transform: rotateY(180deg);
+    background: white;
+    transform: rotateY(180deg);
 }
 
 .front img, .back img {
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
 }
 
 .front p, .back p {
-  margin: 5px 0;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Image à l'intérieur de la carte */
-/*.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Texte affiché sur chaque face */
-/*.card p {
-    font-size: 1.2em;
+    margin: 5px 0;
     font-weight: bold;
     color: #333;
-    
 }
-/********** RESPONSIVE DESIGN *********/
-@media (max-width: 768px) {
-  .flashcard {
-      width: 90%; /* Ajuste la largeur sur mobile */
-      height: auto;
-  }
-  .card {
-      height: auto;
-  }
-  .front, .back {
-      height: auto;
-      padding: 20px;
-  }
-}
-/********************************CONTACT**************************/
-#contact{
-    margin: 20px ;
+
+#contact {
+    margin: 20px;
     padding: 20px;
-    /*background-color: rgb(87, 87, 87);
-    /*background-color: rgb(44, 43, 43);*/
     background-color: rgb(130, 120, 87);
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    /*background-color:rgb(174, 172, 172);*/
     border-radius: 20px;
-    /*position: relative;*/
     text-align: center;
-    height: auto;
-  }
-  #contact h3{
-    text-align: center;
+}
+
+#contact h3 {
     margin: 20px;
     font-size: 1.2em;
-  }
-  #contact button{
+}
+
+#contact button {
     height: 50px;
     width: 80%;
-    /*width: 10%;*/
     border-radius: 20px;
     margin: 30px;
-  }
-  
-  /*********************************FOOTER ********************************/
-  footer  {
+}
+
+footer {
     text-align: center;
-  }
-  footer p {
+}
+
+footer p {
     font-size: 0.9em;
     padding: 10px;
-  }
-
+}
