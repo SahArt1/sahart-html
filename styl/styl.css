@@ -13,6 +13,8 @@ body {
     width: 80px; /* taille réduite sur mobile */
   }
 } 
+
+
 header {
     display: flex;
     align-items: center;
@@ -26,6 +28,30 @@ header {
     flex-wrap: wrap;
     padding: 10px;
 }
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .logo p {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+  }
+}
+
 .logo {
     display: flex;
     align-items: center; /* aligne verticalement l'image et le texte */
@@ -54,7 +80,7 @@ nav {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 120px;
+  gap: 90px;
   margin: 0;
   padding: 0;
 }
@@ -87,6 +113,19 @@ nav {
   nav ul li a:hover {
     background-color: #575757;
   }*/
+@media (max-width: 768px) {
+  #accueil img {
+    max-width: 90%;
+  }
+
+  .flashcards-container {
+    grid-template-columns: 1fr;
+  }
+
+  #contact button {
+    width: 90%;
+  }
+}
 
 #accueil {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
