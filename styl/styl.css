@@ -28,29 +28,6 @@ header {
     flex-wrap: wrap;
     padding: 10px;
 }
-@media (max-width: 768px) {
-  .menu ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 0;
-  }
-
-  nav {
-    padding: 10px 20px;
-  }
-
-  .logo {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .logo p {
-    font-size: 1.2em;
-    letter-spacing: 5px;
-  }
-}
 
 .logo {
     display: flex;
@@ -252,3 +229,43 @@ nav {
     font-size: 0.9em;
     padding: 10px;
   }
+@media (max-width: 768px) {
+  .menu ul {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+  }
+   .menu ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 1.1em;
+  }
+  nav {
+    padding: 0;
+    width: 100%;
+
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
+ .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo p {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+  }
+}
