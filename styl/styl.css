@@ -243,16 +243,22 @@ nav {
   }
 
 @media (max-width: 768px) {
+  nav {
+    flex-shrink: 1;
+    flex-grow: 0;
+    width: auto;
+  }
   .menu ul {
-    gap:15px;
+    gap:10px;
   }
   
    .menu ul li a {
-    font-size:0.95em;
+    font-size:0.9em;
+    padding: 5px; 
   }
     .logo p {
-    font-size: 1.1em;
-    letter-spacing: 4px;
+    font-size: 1.2em;
+    letter-spacing: 3px;
   }
     .logo img {
     width: 60px;
