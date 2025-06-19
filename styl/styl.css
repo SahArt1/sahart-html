@@ -8,11 +8,11 @@ body {
     /*background-color: rgb(130, 120, 87);*/
     background-color:  white;
 }
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .logo img {
-    width: 80px; /* taille réduite sur mobile */
+    width: 80px; 
   }
-} 
+} */
 
 
 header {
@@ -90,7 +90,7 @@ nav {
   nav ul li a:hover {
     background-color: #575757;
   }*/
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   #accueil img {
     max-width: 90%;
   }
@@ -103,7 +103,7 @@ nav {
     width: 90%;
   }
 }
-
+*/
 #accueil {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   border-radius: 15px;
@@ -229,7 +229,7 @@ nav {
     font-size: 0.9em;
     padding: 10px;
   }
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .menu ul {
     display : flex;
     flex-direction: column;
@@ -269,3 +269,4 @@ nav {
     letter-spacing: 5px;
   }
 }
+*/
