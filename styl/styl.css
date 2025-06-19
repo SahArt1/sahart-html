@@ -2,125 +2,153 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 }
-
 body {
-    background-color: rgb(130, 120, 87);
+    /*background-color: rgb(130, 120, 87);*/
+    background-color:  white;
 }
-
 @media (max-width: 768px) {
   .logo img {
     width: 80px; /* taille réduite sur mobile */
   }
-}
-
-
+} 
 header {
     display: flex;
     align-items: center;
-    background-color: rgb(130, 120, 87);
-    border-radius: 15px;
+    /*background-color: rgb(58, 58, 55);*/
+    background-color: white;
+    /*border-radius: 15px;*/
     justify-content: space-between;
     box-shadow: 0 4px 6px rgba(47, 47, 47, 0.2);
-    margin: 20px 10px;
+    /*margin: 20px 10px;*/
     height: 130px;
     flex-wrap: wrap;
     padding: 10px;
 }
+.logo {
+    display: flex;
+    align-items: center; /* aligne verticalement l'image et le texte */
+    gap: 40px; /* espace entre l'image et le texte */
 
-
+}
 .logo img {
+  /*background-color: #262626;*/
   max-width: 100%;
   height: auto;
-  width: 120px; /* ou une taille plus petite selon ton besoin */
+  width: 80px; 
+  border-radius: 15px;
+}
+.logo p {
+    font-size: 1.5em;
+    /*font-weight: bold;*/
+    color: #262626;
+    margin: 0px;
+    letter-spacing: 9px; /* espace entre les lettres */
+}
+nav {
+  /*background-color: #333;*/
+  padding: 10px 100px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin: 0;
+  padding: 0;
+}
+.menu ul li a {
+  color: rgb(17, 16, 16);
+  text-decoration: none;
+  /*font-weight: bold;*/
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+.menu ul li a:hover {
+  color: rgb(222, 127, 18);
 }
 
-
-nav ul {
+  /*nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     padding: 5px 10px;
     border-radius: 15px;
-}
-
-nav ul li a:hover {
+  } 
+  
+  nav ul li a:hover {
     background-color: #575757;
-}
+  }*/
 
 #accueil {
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
 }
-
 #accueil h2 {
-    color: white;
-    font-size: 1.7em;
-    margin: 20px;
-    padding: 10px;
+  color: rgb(12, 12, 12);
+  font-size: 1.7em;
+  margin: 10px;
+  padding: 10px;
 }
-
 #accueil img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  max-width: 75%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  /*border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);*/
 }
-
 #service {
-    background-color: rgb(130, 120, 87);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    border-radius: 15px;
-    margin: 20px;
-    padding: 20px;
+  /*background-color: rgb(130, 120, 87);*/
+  background-color: rgb(255, 255, 255);
+  box-shadow : 0 4px 6px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
 }
-
 #service h3 {
-    text-align: center;
-    margin: 20px;
-    font-size: 1.7em;
-    padding: 20px;
+  text-align: center;
+  margin: 20px;
+  font-size: 1.7em;
+  padding: 20px;
 }
-
 .flashcards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
-
 .flashcard {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    perspective: 1000px;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
 }
-
 .card {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
     transition: transform 0.6s;
-}
-
-.flashcard:hover .card {
+  }
+  
+  .flashcard:hover .card {
     transform: rotateY(180deg);
-}
-
-.front, .back {
+  }
+  
+  .front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -132,56 +160,56 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
-
-.front {
+  }
+  
+  .front {
     background: white;
-}
-
-.back {
+  }
+  
+  .back {
     background: white;
     transform: rotateY(180deg);
-}
-
-.front img, .back img {
+  }
+  
+  .front img, .back img {
     width: 100%;
     height: 80%;
     object-fit: cover;
-}
-
-.front p, .back p {
+  }
+  
+  .front p, .back p {
     margin: 5px 0;
     font-weight: bold;
     color: #333;
-}
-
-#contact {
+  }
+  
+  #contact {
     margin: 20px;
     padding: 20px;
-    background-color: rgb(130, 120, 87);
+    /*background-color: rgb(130, 120, 87);*/
+    background-color:rgb(255, 255, 255);
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     border-radius: 20px;
     text-align: center;
-}
-
-#contact h3 {
+  }
+  
+  #contact h3 {
     margin: 20px;
     font-size: 1.2em;
-}
-
-#contact button {
+  }
+  
+  #contact button {
     height: 50px;
     width: 80%;
     border-radius: 20px;
     margin: 30px;
-}
-
-footer {
+  }
+  
+  footer {
     text-align: center;
-}
-
-footer p {
+  }
+  
+  footer p {
     font-size: 0.9em;
     padding: 10px;
-}
-
+  }
