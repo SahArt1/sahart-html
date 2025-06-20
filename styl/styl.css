@@ -5,13 +5,22 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body {
-    /*background-color: rgb(130, 120, 87);*/
+    
     background-color:  white;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     overflow-x: hidden;
 }
+.invisible-seo {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /*@media (max-width: 768px) {
   .logo img {
     width: 80px; 
